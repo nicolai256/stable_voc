@@ -376,7 +376,7 @@ def main():
         default=128,
         help="overlap size for GOBIG",
     )
-    parser.add_argument("--embedding_path", type=str, default="C:/deepdream-test/textual_inversion-sd/logs/22022-09-07T20-11-46_portrait/checkpoints/embeddings_gs-2499.pt" ,help="Path to a pre-trained embedding manager checkpoint")
+    parser.add_argument("--embedding_path", type=str, help="Path to a pre-trained embedding manager checkpoint")
 
     parser.add_argument("--image_file", type=str)
 
