@@ -283,7 +283,7 @@ def main():
     
     #seamless
     
-    if args.seamless:
+    if opt.seamless:
         print(">> changed to seamless tiling mode")
         patch_conv(torch.nn.Conv2d)
     

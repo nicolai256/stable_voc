@@ -559,9 +559,7 @@ def text2img2(opt: Options):
             shutil.copyfile(os.path.join(sample_path, f"{base_filename}.png"),opt.image_file)
             sys.stdout.write('Progress saved\n')
             sys.stdout.flush()
-            if opt.seamless:
-                print(">> changed to seamless tiling mode")
-                patch_conv(torch.nn.Conv2d)
+            
             #source_image = Image.open(opt.image_file)
             og_size = (opt.H,opt.W)
             slices, _ = grid_slice(source_image, opt.gobig_overlap, og_size, False)
