@@ -68,7 +68,7 @@ def parse_args():
     parser.add_argument("--image_file", type=str)
     parser.add_argument("--dynamic_threshold",  type=float, help="?")
     parser.add_argument("--static_threshold",  type=float, help="?")
-    parser.add_argument("--embedding_path", type=str, default="C:/deepdream-test/textual_inversion-sd/logs/22022-09-07T20-11-46_portrait/checkpoints/embeddings.pt" ,help="Path to a pre-trained embedding manager checkpoint")
+    parser.add_argument("--embedding_path", type=str, help="Path to a pre-trained embedding manager checkpoint")
 
     args = parser.parse_args()
     return args
