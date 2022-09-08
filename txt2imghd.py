@@ -376,6 +376,7 @@ def main():
         default=128,
         help="overlap size for GOBIG",
     )
+    parser.add_argument("--embedding_path", type=str, default="C:/deepdream-test/textual_inversion-sd/logs/22022-09-07T20-11-46_portrait/checkpoints/embeddings_gs-2499.pt" ,help="Path to a pre-trained embedding manager checkpoint")
 
     parser.add_argument("--image_file", type=str)
 
@@ -416,7 +417,7 @@ def text2img2(opt: Options):
 
     config = OmegaConf.load(f"{opt.config}")
     model = load_model_from_config(config, f"{opt.ckpt}")
-
+    model.embedding_manager.load(opt.embedding_path)
     #fix for using less VRAM 1/3 - add next line
     #model.half()
 
